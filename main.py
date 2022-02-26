@@ -30,3 +30,5 @@ for row in hour_data:
     employee_data.close()
     hour_data.close()
     return updated_dictionary_list
+class Employee():
+    all_dict = {'name': '', 'Date': '', 'Regular Hours Worked': '', 'Overtime Hours Worked': '', 'Regular Rate': '', 'Overtime Rate': '', 'Regular Pay': '', 'Overtime Pay': '', 'Gross Pay': '', 'Standard Rate Pay': '', 'Higher Rate Pay': '', 'Standard Tax': '', 'Higher Tax': '', 'Total Tax': '', 'Tax Credit': '', 'Net Deductions': '', 'Net Pay': ''}

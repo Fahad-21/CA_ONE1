@@ -42,3 +42,10 @@ class Employee():
  self.all_dict.update({'Date': date, 'Regular Hours Worked': regular_hours_worked, 'Overtime Hours Worked': overtime_hors_worked, 'Regular Rate': employee_dict.get('HourlyRate')})
         else:
             print('regular hours worked must be less than hours worked')
+overtime_rate = int(employee_dict.get('HourlyRate')) + round(((int(hours_dict.get('HoursWorked'))) - (int(employee_dict.get('RegHours')))) * (float(employee_dict.get('OTMultiple'))))
+        self.all_dict.update({'Overtime Rate': overtime_rate})
+        overtime_pay = overtime_hors_worked * overtime_rate # calculating overtime pay
+        regular_pay = int(employee_dict.get('HourlyRate')) * int(employee_dict.get('RegHours'))
+        if overtime_pay > 0 and overtime_hors_worked >= 0:
+            self.all_dict.update({'Regular Pay': regular_pay})
+            self.all_dict.update({'Overtime Pay': overtime_pay})

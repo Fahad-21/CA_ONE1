@@ -61,3 +61,5 @@ else:
         net_deductions = round(total_tax - tax_credit, 2)  # calculating net_decuction
         net_pay = gross_pay - net_deductions  # calculating net pay
         if net_pay <= gross_pay and net_pay > 0:
+ self.all_dict.update({'Gross Pay': gross_pay, 'Standard Rate Pay': standard_rate_pay, 'Higher Rate Pay': higher_rate_pay, 'Standard Tax': standard_tax, 'Higher Tax': higher_tax, 'Total Tax': total_tax, 'Tax Credit': tax_credit, 'Net Deductions': net_deductions, 'Net Pay': net_pay})
+        else:

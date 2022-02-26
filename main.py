@@ -66,3 +66,10 @@ else:
  print('Net_pay cannot be greater than gross_pay or net_pqy cannot be negative')
         print(self.all_dict)
         return self.all_dict
+#TestMethod
+    def testNetLessEqualGross(self):
+        e = Employee()
+        pi = e.computePayment(1,31/10/2021)
+        self.assertLessEqual(pi['Net Pay'],pi['Gross Pay'])
+
+computeAllPayment('Employees.txt', 'Hours.txt')

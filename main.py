@@ -39,3 +39,6 @@ class Employee():
         hours_worked = int(hours_dict.get('HoursWorked'))
         regular_hours_worked = int(employee_dict.get('RegHours'))
         if regular_hours_worked < hours_worked:
+ self.all_dict.update({'Date': date, 'Regular Hours Worked': regular_hours_worked, 'Overtime Hours Worked': overtime_hors_worked, 'Regular Rate': employee_dict.get('HourlyRate')})
+        else:
+            print('regular hours worked must be less than hours worked')

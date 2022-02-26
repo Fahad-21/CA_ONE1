@@ -63,3 +63,6 @@ else:
         if net_pay <= gross_pay and net_pay > 0:
  self.all_dict.update({'Gross Pay': gross_pay, 'Standard Rate Pay': standard_rate_pay, 'Higher Rate Pay': higher_rate_pay, 'Standard Tax': standard_tax, 'Higher Tax': higher_tax, 'Total Tax': total_tax, 'Tax Credit': tax_credit, 'Net Deductions': net_deductions, 'Net Pay': net_pay})
         else:
+ print('Net_pay cannot be greater than gross_pay or net_pqy cannot be negative')
+        print(self.all_dict)
+        return self.all_dict

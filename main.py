@@ -49,3 +49,15 @@ overtime_rate = int(employee_dict.get('HourlyRate')) + round(((int(hours_dict.ge
         if overtime_pay > 0 and overtime_hors_worked >= 0:
             self.all_dict.update({'Regular Pay': regular_pay})
             self.all_dict.update({'Overtime Pay': overtime_pay})
+else:
+            print('overtimee hours worked and overtime pay cannot be negative')
+        gross_pay = regular_pay + overtime_pay  # to calculate gross pay
+        standard_rate_pay = int(employee_dict.get('StandardBand'))
+        higher_rate_pay = gross_pay - int(standard_rate_pay)
+        standard_tax = (standard_rate_pay * 20) / 100
+        higher_tax = (higher_rate_pay * 40) / 100
+        total_tax = standard_tax + higher_tax  # to calculate total tax
+        tax_credit = int(employee_dict.get('TaxCredit'))
+        net_deductions = round(total_tax - tax_credit, 2)  # calculating net_decuction
+        net_pay = gross_pay - net_deductions  # calculating net pay
+        if net_pay <= gross_pay and net_pay > 0:

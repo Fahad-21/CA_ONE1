@@ -32,3 +32,10 @@ for row in hour_data:
     return updated_dictionary_list
 class Employee():
     all_dict = {'name': '', 'Date': '', 'Regular Hours Worked': '', 'Overtime Hours Worked': '', 'Regular Rate': '', 'Overtime Rate': '', 'Regular Pay': '', 'Overtime Pay': '', 'Gross Pay': '', 'Standard Rate Pay': '', 'Higher Rate Pay': '', 'Standard Tax': '', 'Higher Tax': '', 'Total Tax': '', 'Tax Credit': '', 'Net Deductions': '', 'Net Pay': ''}
+ # to compute total payment details
+    def computePayment(self,HoursWorked, date):
+        self.all_dict.update({'name': employee_dict.get('FirstName') + ' ' + employee_dict.get('LastName')})
+        overtime_hors_worked = (int(hours_dict.get('HoursWorked'))) - (int(employee_dict.get('RegHours')))
+        hours_worked = int(hours_dict.get('HoursWorked'))
+        regular_hours_worked = int(employee_dict.get('RegHours'))
+        if regular_hours_worked < hours_worked:
